@@ -18,7 +18,7 @@
             <button class="navLink" id="homeBtn">HOME</button>
             <button class="navLink" id="calendarBtn">PROGRAM CALENDAR</button>
             <button class="navLink" id="researchBtn">RESEARCH TOPICS</button>
-            <button class="navLink" id="testBtn">TEST KNOWLEDGE</button>
+            <button class="navLink" id="knowledgeBtn">TEST KNOWLEDGE</button>
             <button class="navLink" id="toolboxBtn">TOOLBOX</button>
         </nav>
     </header>
@@ -26,12 +26,13 @@
     <!-- CONTENT SECTIONS -->
 
     <!-- HERO PAGE MARKUP-->
-    <section id="heroPage">
-        <div id="heroImgContainer">
+    <section id="heroPage" class="active">
+        <div id="heroTopContainer">
             <div id="heroImgTextContainer">
                 <h1 id="heroTitle">Technologist's Toolbox</h1>
                 <h2 id="heroDescription">Study resources for aspiring Electrical Engineering Technologists</h2>
             </div>
+            <div id="heroImg"></div>
         </div>
         <div id="heroTextContainer">
             <div class="heroTextBox">
@@ -72,7 +73,7 @@
     </section>
 
     <!-- PROGRAM CALENDAR MARKUP-->
-    <section id="calendarPage">
+    <section id="calendarPage" class="inactive">
         <div id="calendarContainer">
             <div class="calendarBox">
                 <h1 class="monthTitle">SEPT</h1>
@@ -145,7 +146,7 @@
                 </ol>
             </div>
             <div class="calendarInfoBox">
-                <h1 class="calendarInfoTitle">ASSIGNMENT HEADLINES</h1>
+                <h1 class="calendarInfoTitle">ASSIGNMENT DEADLINES</h1>
                 <ol class="calendarInfoList">
                     <li class="calendarInfoItem">one</li>
                     <li class="calendarInfoItem">two</li>
@@ -156,54 +157,55 @@
     </section>
 
     <!-- RESEARCH TOPICS MARKUP-->
-    <section id="researchPage">
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
-                <h4 class="selectTopicDescription">wether you are working in the PLC lab or in the transformer room of a high-voltage substation, safety is always the top priority</h4>
+    <section id="researchPage" class="inactive">
+        <div class="gridWrapper">
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
+                    <h4 class="selectTopicDescription">wether you are working in the lab or on the job, safety is always the top priority</h4>
+                </div>
+                <button class="selectContainerBtn" id="topic1Btn"></button>
             </div>
-            <button class="selectContainerBtn" id="topic1Btn"></button>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Ohm's Law</h2>
-                <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
-                <button class="selectContainerBtn" id="topic2Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Ohm's Law</h2>
+                    <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
+                    <button class="selectContainerBtn" id="topic2Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Power (DC)</h2>
-                <h4 class="selectTopicDescription">Power triangle and several equations to show how power relates voltage, 
-                    current and resistance in a circuit as well as how we can use this information to our advantage</h4>
-                <button class="selectContainerBtn" id="topic3Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Power (DC)</h2>
+                    <h4 class="selectTopicDescription">The Power Triangle and supporting theory for how electrical power works</h4>
+                    <button class="selectContainerBtn" id="topic3Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Resistors, Inductors and Capcitors! Oh My</h2>
-                <h4 class="selectTopicDescription">Since resistors on their own can’t really do a whole lot of useful things, its time to introduce some new components to our circuits</h4>
-                <button class="selectContainerBtn" id="topic4Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Inductors and Capcitors</h2>
+                    <h4 class="selectTopicDescription">Since resistors on their own have limited application, its time to introduce some new components</h4>
+                    <button class="selectContainerBtn" id="topic4Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">DC Circuits</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum laudantium?</h4>
-                <button class="selectContainerBtn" id="topic5Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">DC Circuits</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum</h4>
+                    <button class="selectContainerBtn" id="topic5Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Circuit Simplification</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate voluptates.</h4>
-                <button class="selectContainerBtn" id="topic6Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Circuit Simplification</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate </h4>
+                    <button class="selectContainerBtn" id="topic6Btn"></button>
+                </div>
             </div>
         </div>
     </section>
@@ -211,54 +213,56 @@
     <!-- RESEARCH PAGE MODULES TO BE CODED HERE-->
 
     <!-- TEST KNOWLEDGE MARKUP -->
-    <section id="knowledgePage">
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
-                <h4 class="selectTopicDescription">wether you are working in the PLC lab or in the transformer room of a high-voltage substation, safety is always the top priority</h4>
+    <section id="knowledgePage" class="inactive">
+        <div class="gridWrapper">
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
+                    <h4 class="selectTopicDescription">wether you are working in the PLC lab or in the transformer room of a high-voltage substation, safety is always the top priority</h4>
+                </div>
+                <button class="selectContainerBtn" id="topic1Btn"></button>
             </div>
-            <button class="selectContainerBtn" id="topic1Btn"></button>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Ohm's Law</h2>
-                <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
-                <button class="selectContainerBtn" id="topic2Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Ohm's Law</h2>
+                    <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
+                    <button class="selectContainerBtn" id="topic2Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Power (DC)</h2>
-                <h4 class="selectTopicDescription">Power triangle and several equations to show how power relates voltage, 
-                    current and resistance in a circuit as well as how we can use this information to our advantage</h4>
-                <button class="selectContainerBtn" id="topic3Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Power (DC)</h2>
+                    <h4 class="selectTopicDescription">Power triangle and several equations to show how power relates voltage, 
+                        current and resistance in a circuit as well as how we can use this information to our advantage</h4>
+                    <button class="selectContainerBtn" id="topic3Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Resistors, Inductors and Capcitors! Oh My</h2>
-                <h4 class="selectTopicDescription">Since resistors on their own can’t really do a whole lot of useful things, its time to introduce some new components to our circuits</h4>
-                <button class="selectContainerBtn" id="topic4Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Resistors, Inductors and Capcitors! Oh My</h2>
+                    <h4 class="selectTopicDescription">Since resistors on their own can’t really do a whole lot of useful things, its time to introduce some new components to our circuits</h4>
+                    <button class="selectContainerBtn" id="topic4Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">DC Circuits</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum laudantium?</h4>
-                <button class="selectContainerBtn" id="topic5Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">DC Circuits</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum laudantium?</h4>
+                    <button class="selectContainerBtn" id="topic5Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Circuit Simplification</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate voluptates.</h4>
-                <button class="selectContainerBtn" id="topic6Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Circuit Simplification</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate voluptates.</h4>
+                    <button class="selectContainerBtn" id="topic6Btn"></button>
+                </div>
             </div>
         </div>
     </section>
@@ -267,54 +271,56 @@
     <!-- TEST KNOWLEDGE PAGE MODULES TO BE CODED HERE-->
 
     <!-- TOOLBOX MARKUP-->
-    <section id="toolboxPage">
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
-                <h4 class="selectTopicDescription">wether you are working in the PLC lab or in the transformer room of a high-voltage substation, safety is always the top priority</h4>
+    <section id="toolboxPage" class="inactive">
+        <div class="gridWrapper">
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Saftery and Best Practices</h2>
+                    <h4 class="selectTopicDescription">wether you are working in the PLC lab or in the transformer room of a high-voltage substation, safety is always the top priority</h4>
+                </div>
+                <button class="selectContainerBtn" id="topic1Btn"></button>
             </div>
-            <button class="selectContainerBtn" id="topic1Btn"></button>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Ohm's Law</h2>
-                <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
-                <button class="selectContainerBtn" id="topic2Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Ohm's Law</h2>
+                    <h4 class="selectTopicDescription">The basis of everything related to electricity. This is the theory of how voltage, current and resistance are related</h4>
+                    <button class="selectContainerBtn" id="topic2Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Electrical Power (DC)</h2>
-                <h4 class="selectTopicDescription">Power triangle and several equations to show how power relates voltage, 
-                    current and resistance in a circuit as well as how we can use this information to our advantage</h4>
-                <button class="selectContainerBtn" id="topic3Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Electrical Power (DC)</h2>
+                    <h4 class="selectTopicDescription">Power triangle and several equations to show how power relates voltage, 
+                        current and resistance in a circuit as well as how we can use this information to our advantage</h4>
+                    <button class="selectContainerBtn" id="topic3Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Resistors, Inductors and Capcitors! Oh My</h2>
-                <h4 class="selectTopicDescription">Since resistors on their own can’t really do a whole lot of useful things, its time to introduce some new components to our circuits</h4>
-                <button class="selectContainerBtn" id="topic4Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Resistors, Inductors and Capcitors! Oh My</h2>
+                    <h4 class="selectTopicDescription">Since resistors on their own can’t really do a whole lot of useful things, its time to introduce some new components to our circuits</h4>
+                    <button class="selectContainerBtn" id="topic4Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">DC Circuits</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum laudantium?</h4>
-                <button class="selectContainerBtn" id="topic5Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">DC Circuits</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic necessitatibus earum pariatur cum laudantium?</h4>
+                    <button class="selectContainerBtn" id="topic5Btn"></button>
+                </div>
             </div>
-        </div>
-        <div class="selectionContainer">
-            <div class="selectIMG"></div>
-            <div class="selectDescription">
-                <h2 class="selectTitle">Circuit Simplification</h2>
-                <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate voluptates.</h4>
-                <button class="selectContainerBtn" id="topic6Btn"></button>
+            <div class="selectionContainer">
+                <div class="selectIMG"></div>
+                <div class="selectDescription">
+                    <h2 class="selectTitle">Circuit Simplification</h2>
+                    <h4 class="selectTopicDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis assumenda commodi odit voluptate voluptates.</h4>
+                    <button class="selectContainerBtn" id="topic6Btn"></button>
+                </div>
             </div>
         </div>
     </section>
@@ -333,5 +339,6 @@
             <h4 id="copyrightTag">EET STUDENT RESOURCE HUB &copy; 2020</h4>
         </div>
     </footer>
+    <script type="text/javascript" src="./src/js/app.js"></script>
 </body>
 </html>

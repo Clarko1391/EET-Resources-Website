@@ -28,12 +28,18 @@ body {
 /* GLOBAL ELEMENTS STYLING */
 section {
     height: 87.5vh;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--BGWhite);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -80,23 +86,48 @@ header {
     color: var(--HLBronze);
 }
 
+.navLink:focus {
+    outline: none;
+}
 
-/* HERO PAGE STYLING */
 
-#heroPage {
+
+/* NAVIGATION DISPLAY CLASSES */
+
+.active {
+    display: flex;
+}
+
+.inactive {
     display: none;
 }
 
-#heroImgContainer {
-    width: 130%;
+
+
+/* HERO PAGE STYLING */
+
+#heroTopContainer {
+    width: 100vw;
     height: 55%;
     background: url("../img/heroPageBackground.jpg") no-repeat center;
-    background-size: cover;
+    background-size: 100vw auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative
 }
+
+/* #heroImg {
+    background: url("../img/heroPageBackground.jpg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
 
 #heroImgTextContainer {
     width: 60%;
@@ -149,10 +180,12 @@ header {
     padding: 0px 10px;
 }
 
+
+
 /* CALENDAR PAGE STYLING */
 
 #calendarContainer {
-    height: 80%;
+    height: 60%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -162,8 +195,7 @@ header {
 }
 
 .calendarBox{
-    justify-self: center;
-    align-self: center;
+    place-self: center;
     width: 160px;
     height: 160px;
     background-color: var(--darkBlue);
@@ -201,12 +233,11 @@ header {
 }
 
 #calendarInfoContainer {
-    height: 40%;
+    height: 30%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-self: center;
-    align-self: center;
+    grid-template-columns: repeat(2, 3fr);
+    place-self: center;
 }
 
 .calendarInfoBox {
@@ -214,30 +245,86 @@ header {
     height: 200px;
     background-color: var(--darkBlue);
     border-radius: 4px;
-    justify-self: center;
-    align-self: center;
+    place-self: center;
 }
 
 .calendarInfoTitle {
     color: var(--HLBronze);
+    padding-left: 20px;
+}
+
+.calendarInfoList {
+    color: var(--white);
 }
 
 
-/* SECTIONS, DISPLAY NONE FOR APPLYING STYLING DURING CONTRUCTION */
-#calendarPage {
-    display: flex;
-}
-
+/* RESEARCH TOPICS STYLING */
 #researchPage {
-    display: none;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 
+.gridWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 80%;
+}
+
+.selectionContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    max-height: 200px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.selectIMG {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
+
+.selectDescription {
+    padding: 0px 10px;
+    width: 70%;
+}
+
+.selectTitle {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.selectTopicDescription {
+    font-size: 1em;
+}
+
+.selectContainerBtn {
+    background: transparent;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 0;
+}
+
+/* TEST KNOWLEDGE PAGE STYLING */
 #knowledgePage {
-    display: none;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 
+
+/* TOOLBOX PAGE STYLING */
 #toolboxPage {
-    display: none;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 
 /* FOOTER STYLING */
