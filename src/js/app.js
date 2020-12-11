@@ -14,23 +14,26 @@ const knowledgePage = document.getElementById('knowledgePage');
 const toolboxPage = document.getElementById('toolboxPage');
 
 
-const mainNavToggle = (navigateTo) => {
+const mainNavToggle = (navigateTo, navHighlight) => {
     let mainNavArray = [heroPage, calendarPage, researchPage, knowledgePage, toolboxPage];
+    let navBtnArray = [homeBtn, calendarBtn, researchBtn, knowledgeBtn, toolboxBtn, aboutBtn, contributeBtn, studyTipsBtn];
     mainNavArray.forEach(page => {
-        if(!page.classList.contains('inactive')) {
             page.classList.remove('active');
             page.classList.add('inactive');
-        }  
-    });
+        }); 
+    navBtnArray.forEach(button => {
+            button.classList.remove('navHighlight');
+        });
     navigateTo.classList.remove('inactive');
     navigateTo.classList.add('active');
+    navHighlight.classList.add('navHighlight');
 }
 
-homeBtn.addEventListener("click", ()=> {mainNavToggle(heroPage)});
-calendarBtn.addEventListener("click", ()=> {mainNavToggle(calendarPage)});
-researchBtn.addEventListener("click", ()=> {mainNavToggle(researchPage)});
-knowledgeBtn.addEventListener("click", ()=> {mainNavToggle(knowledgePage)});
-toolboxBtn.addEventListener("click", ()=> {mainNavToggle(toolboxPage)});
+homeBtn.addEventListener("click", ()=> {mainNavToggle(heroPage, homeBtn)});
+calendarBtn.addEventListener("click", ()=> {mainNavToggle(calendarPage, calendarBtn)});
+researchBtn.addEventListener("click", ()=> {mainNavToggle(researchPage, researchBtn)});
+knowledgeBtn.addEventListener("click", ()=> {mainNavToggle(knowledgePage, knowledgeBtn)});
+toolboxBtn.addEventListener("click", ()=> {mainNavToggle(toolboxPage, toolboxBtn)});
 // aboutBtn.addEventListener("click", (aboutBtn)=> {mainNavToggle(aboutBtn)});
 // contributeBtn.addEventListener("click", (contributeBtn)=> {mainNavToggle(contributeBtn)});
 // studyTipsBtn.addEventListener("click", (studyTipsBtn)=> {mainNavToggle(studyTipsBtn)});

@@ -102,6 +102,10 @@ header {
     display: none;
 }
 
+.navHighlight {
+    color: var(--HLBronze);
+}
+
 
 
 /* HERO PAGE STYLING */
@@ -117,17 +121,6 @@ header {
     align-items: center;
     position: relative
 }
-
-/* #heroImg {
-    background: url("../img/heroPageBackground.jpg") no-repeat center;
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} */
 
 #heroImgTextContainer {
     width: 60%;
@@ -151,18 +144,20 @@ header {
 
 #heroTextContainer {
     height: 45%;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
 }
 
 .heroTextBox {
-    width: 30%;
+    width: 90%;
+    height: 80%;
     background-color: var(--darkBlue);
     color: white;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 4px;
+    place-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -279,7 +274,7 @@ header {
     color: var(--white);
     max-height: 200px;
     margin: 10px;
-    border-radius: 4px;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .selectIMG {
@@ -295,7 +290,8 @@ header {
 
 .selectTitle {
     font-size: 1.2em;
-    text-align: center;
+    text-align: left;
+    color: var(--HLBronze);
 }
 
 .selectTopicDescription {
